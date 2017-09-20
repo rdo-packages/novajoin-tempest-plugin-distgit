@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a961159_c7ae7de7",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-20T16:15:43Z",
+      "side": 1,
+      "message": "do we want to consider small rotation if service is only used in here to be %{service}-tests-tempest to be directly that value instead of copy-paste duplication of the name",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 24
+      },
+      "revId": "a5d769aef69c7e290c2a4c63d0e52b72b885ce82",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a961159_87a55506",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-20T16:15:43Z",
+      "side": 1,
+      "message": "can we sort these to keep in stable order?",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 32
+      },
+      "revId": "a5d769aef69c7e290c2a4c63d0e52b72b885ce82",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a961159_a7aa51d2",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-20T16:15:43Z",
+      "side": 1,
+      "message": "does the package require both oslo-sphinx and openstackdocstheme? I thought there was work to reduce it to just openstackdocstheme",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 34
+      },
+      "revId": "a5d769aef69c7e290c2a4c63d0e52b72b885ce82",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
