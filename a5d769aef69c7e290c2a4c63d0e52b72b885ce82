@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a930d6b_4b20e59b",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-09-21T20:09:19Z",
+      "side": 1,
+      "message": "I tried that, but it did not work for me.  Looks like you cannot have substitutions in %globals with other globals.",
+      "parentUuid": "3a961159_c7ae7de7",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 24
+      },
+      "revId": "a5d769aef69c7e290c2a4c63d0e52b72b885ce82",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a961159_87a55506",
         "filename": "python-novajoin-tests-tempest.spec",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "1a930d6b_6b25a1aa",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-09-21T20:09:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a961159_87a55506",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 32
+      },
+      "revId": "a5d769aef69c7e290c2a4c63d0e52b72b885ce82",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a961159_a7aa51d2",
         "filename": "python-novajoin-tests-tempest.spec",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2017-09-20T16:15:43Z",
       "side": 1,
       "message": "does the package require both oslo-sphinx and openstackdocstheme? I thought there was work to reduce it to just openstackdocstheme",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 34
+      },
+      "revId": "a5d769aef69c7e290c2a4c63d0e52b72b885ce82",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a930d6b_8b39edda",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 321
+      },
+      "writtenOn": "2017-09-21T20:09:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a961159_a7aa51d2",
       "range": {
         "startLine": 57,
         "startChar": 0,
