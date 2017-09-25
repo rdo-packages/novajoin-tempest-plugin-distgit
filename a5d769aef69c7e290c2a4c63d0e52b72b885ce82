@@ -49,6 +49,47 @@
     },
     {
       "key": {
+        "uuid": "1a930d6b_0e798bfc",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-25T15:49:19Z",
+      "side": 1,
+      "message": "suggesting to use here %global service novajoin-tests-tempest",
+      "parentUuid": "1a930d6b_4b20e59b",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 24
+      },
+      "revId": "a5d769aef69c7e290c2a4c63d0e52b72b885ce82",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a930d6b_2e7e47e5",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-25T15:49:19Z",
+      "side": 1,
+      "message": "and then here\n\nName:  python-%{service}",
+      "revId": "a5d769aef69c7e290c2a4c63d0e52b72b885ce82",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a961159_87a55506",
         "filename": "python-novajoin-tests-tempest.spec",
         "patchSetId": 3
