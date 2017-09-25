@@ -1,0 +1,280 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a930d6b_ce76a306",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-25T15:56:38Z",
+      "side": 1,
+      "message": "To carry discussion forward\n\nmight we be able to use the following here and simplify the rest of the usages of %{service}-tests-tempest  through out the .spec?\n\n%global service novajoin-tests-tempest",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 24
+      },
+      "revId": "afc823cc93438ec307a05ba9bfb5722047cefb5d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a930d6b_ee735f13",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-25T15:56:38Z",
+      "side": 1,
+      "message": "then this could become\n\npython-%{service}",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 43
+      },
+      "revId": "afc823cc93438ec307a05ba9bfb5722047cefb5d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a930d6b_2e656745",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-25T15:56:38Z",
+      "side": 1,
+      "message": "and this python2-%{service}",
+      "range": {
+        "startLine": 28,
+        "startChar": 12,
+        "endLine": 28,
+        "endChar": 44
+      },
+      "revId": "afc823cc93438ec307a05ba9bfb5722047cefb5d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a930d6b_0e60ab34",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-25T15:56:38Z",
+      "side": 1,
+      "message": "and this ... python2-%{service} }",
+      "range": {
+        "startLine": 30,
+        "startChar": 34,
+        "endLine": 30,
+        "endChar": 67
+      },
+      "revId": "afc823cc93438ec307a05ba9bfb5722047cefb5d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a930d6b_aed797be",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-25T15:56:38Z",
+      "side": 1,
+      "message": "These should be moved up to top level or duplicated for both python2- and python3- sections",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 32
+      },
+      "revId": "afc823cc93438ec307a05ba9bfb5722047cefb5d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a930d6b_4e5ab384",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-25T15:56:38Z",
+      "side": 1,
+      "message": "can we get this in stable order as well? or is there a reason/mapping for the order here?",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 23
+      },
+      "revId": "afc823cc93438ec307a05ba9bfb5722047cefb5d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a930d6b_6e5f6f73",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-25T15:56:38Z",
+      "side": 1,
+      "message": "and this python2-%{service}",
+      "range": {
+        "startLine": 46,
+        "startChar": 16,
+        "endLine": 46,
+        "endChar": 48
+      },
+      "revId": "afc823cc93438ec307a05ba9bfb5722047cefb5d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a930d6b_8e53bb6b",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-25T15:56:38Z",
+      "side": 1,
+      "message": "and this python-%{service}-doc",
+      "range": {
+        "startLine": 51,
+        "startChar": 12,
+        "endLine": 51,
+        "endChar": 47
+      },
+      "revId": "afc823cc93438ec307a05ba9bfb5722047cefb5d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a930d6b_ce4dc3c6",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-25T15:56:38Z",
+      "side": 1,
+      "message": "%{name}",
+      "range": {
+        "startLine": 52,
+        "startChar": 16,
+        "endLine": 52,
+        "endChar": 47
+      },
+      "revId": "afc823cc93438ec307a05ba9bfb5722047cefb5d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a930d6b_ae50775f",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-25T15:56:38Z",
+      "side": 1,
+      "message": "and this python-%{service}-doc",
+      "range": {
+        "startLine": 57,
+        "startChar": 16,
+        "endLine": 57,
+        "endChar": 51
+      },
+      "revId": "afc823cc93438ec307a05ba9bfb5722047cefb5d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a930d6b_2ecc8735",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-25T15:56:38Z",
+      "side": 1,
+      "message": "and this python3-%{service}",
+      "range": {
+        "startLine": 62,
+        "startChar": 12,
+        "endLine": 62,
+        "endChar": 44
+      },
+      "revId": "afc823cc93438ec307a05ba9bfb5722047cefb5d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a930d6b_6ed68fc7",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2017-09-25T15:56:38Z",
+      "side": 1,
+      "message": "and this python3-%{service}",
+      "range": {
+        "startLine": 64,
+        "startChar": 34,
+        "endLine": 64,
+        "endChar": 66
+      },
+      "revId": "afc823cc93438ec307a05ba9bfb5722047cefb5d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
