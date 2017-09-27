@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa81d914_ea68a789",
+        "filename": "python-novajoin-tests-tempest.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 424
+      },
+      "writtenOn": "2017-09-27T07:02:17Z",
+      "side": 1,
+      "message": "you are just missing cgit in here, E.g. :\n\nhttps://review.rdoproject.org/r/#/c/7821/2/python-barbican-tests-tempest.spec",
+      "revId": "28e65347be59ad134e2de6afea349a08360914d6",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
