@@ -24,6 +24,8 @@ URL:        https://git.openstack.org/cgit/openstack/%{plugin}
 Source0:    http://tarballs.openstack.org/%{plugin}/%{plugin}-%{version}.tar.gz
 
 BuildArch:  noarch
+BuildRequires:  git
+BuildRequires:  openstack-macros
 
 %description
 %{common_desc}
@@ -31,20 +33,22 @@ BuildArch:  noarch
 %package -n python2-%{service}
 Summary: %{summary}
 %{?python_provide:%python_provide python2-%{service}}
-BuildRequires:  git
-BuildRequires:  openstack-macros
 BuildRequires:  python2-devel
-BuildRequires:  python-pbr
-BuildRequires:  python-setuptools
-BuildRequires:  python-six
+BuildRequires:  python2-pbr
+BuildRequires:  python2-setuptools
+BuildRequires:  python2-six
 
 Requires:   python2-ipalib
+%if 0%{?fedora}
+Requires:   python2-gssapi
+%else
 Requires:   python-gssapi
-Requires:   python-oslo-config >= 1:3.22.0
-Requires:   python-oslo-log
-Requires:   python-pbr
-Requires:   python-six
-Requires:   python-tempest >= 1:12.1.0
+%endif
+Requires:   python2-oslo-config >= 2:4.0.0
+Requires:   python2-oslo-log >= 3.30.0
+Requires:   python2-pbr >= 2.0.0
+Requires:   python2-six >= 1.9.0
+Requires:   python2-tempest >= 1:17.2.0
 
 %description -n python2-%{service}
 %{common_desc}
@@ -53,8 +57,8 @@ Requires:   python-tempest >= 1:12.1.0
 %package -n python-%{service}-doc
 Summary:        python-%{service} documentation
 
-BuildRequires:  python-sphinx
-BuildRequires:  python-openstackdocstheme
+BuildRequires:  python2-sphinx
+BuildRequires:  python2-openstackdocstheme
 
 %description -n python-%{service}-doc
 This package contains the documentation for the Novajoin tempest tests.
@@ -69,13 +73,13 @@ BuildRequires:  python3-pbr
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-six
 
-Requires:   python3-gssapi
 Requires:   python3-ipalib
-Requires:   python3-pbr
-Requires:   python3-six
-Requires:   python3-tempest >= 1:12.1.0
-Requires:   python3-oslo-config >= 1:3.22.0
-Requires:   python3-oslo-log
+Requires:   python3-gssapi
+Requires:   python3-oslo-config >= 2:4.0.0
+Requires:   python3-oslo-log >= 3.30.0
+Requires:   python3-pbr >= 2.0.0
+Requires:   python3-six >= 1.9.0
+Requires:   python3-tempest >= 1:17.2.0
 
 %description -n python3-%{service}
 %{common_desc}
