@@ -1,3 +1,9 @@
+%{!?upstream_version: %global upstream_version %{commit}}
+%global commit f657712db4f81ff7172d764f9b38992812d48e0f
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
+
 %global service novajoin-tests-tempest
 %global plugin novajoin-tempest-plugin
 %global module novajoin_tempest_plugin
@@ -7,21 +13,24 @@ This package contains Tempest tests to cover the Novajoin project. \
 Additionally it provides a plugin to automatically load these tests \
 into tempest.
 
-
-%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+%if 0%{?dlrn}
+%define tarsources %module
+%else
+%define tarsources %plugin
+%endif
 
 %if 0%{?fedora}
 %global with_python3 1
 %endif
 
 Name:       python-%{service}
-Version:    XXX
-Release:    XXX
+Version:    0.0.1
+Release:    0.1%{?alphatag}%{?dist}
 Summary:    Tempest Integration of Novajoin
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}
 
-Source0:    http://tarballs.openstack.org/%{plugin}/%{plugin}-%{version}.tar.gz
+Source0:    http://github.com/openstack/%{plugin}/archive/%{commit}.tar.gz#/%{plugin}-%{shortcommit}.tar.gz
 
 BuildArch:  noarch
 BuildRequires:  git
@@ -87,7 +96,7 @@ Requires:   python3-tempest >= 1:18.0.0
 
 
 %prep
-%autosetup -n %{module}-%{upstream_version} -S git
+%autosetup -n %{tarsources}-%{upstream_version} -S git
 
 # remove requirements
 %py_req_cleanup
@@ -132,3 +141,5 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Tue Aug 28 2018 Chandan Kumar <chkumar@redhat.com> 0.0.1-0.2.f657712dgit
+- Update to pre-release 0.0.1 (f657712db4f81ff7172d764f9b38992812d48e0f)
