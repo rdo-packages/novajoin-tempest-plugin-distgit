@@ -51,6 +51,7 @@ Requires:   python%{pyver}-oslo-log >= 3.36.0
 Requires:   python%{pyver}-pbr >= 3.1.1
 Requires:   python%{pyver}-six >= 1.10.0
 Requires:   python%{pyver}-tempest >= 1:18.0.0
+Requires:   python%{pyver}-ipaclient
 
 # Handle python2 exception
 %if %{pyver} == 2
