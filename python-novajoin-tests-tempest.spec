@@ -1,3 +1,8 @@
+%{!?upstream_version: %global upstream_version %{commit}}
+%global commit 3f51bbe815a21527475db38cbd3dabf8603e4498
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
 # Macros for py2/py3 compatibility
 %if 0%{?fedora} || 0%{?rhel} > 7
 %global pyver %{python3_pkgversion}
@@ -22,13 +27,13 @@ into tempest.
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:       python-%{service}
-Version:    XXX
-Release:    XXX
+Version:    0.0.1
+Release:    0.3%{?alphatag}%{?dist}
 Summary:    Tempest Integration of Novajoin
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}
 
-Source0:    http://tarballs.openstack.org/%{plugin}/%{plugin}-%{version}.tar.gz
+Source0:    https://opendev.org/openstack/%{plugin}/archive/%{upstream_version}.tar.gz#/%{module}-%{shortcommit}.tar.gz
 
 BuildArch:  noarch
 BuildRequires:  git
@@ -75,7 +80,7 @@ This package contains the documentation for the Novajoin tempest tests.
 %endif
 
 %prep
-%autosetup -n %{module}-%{upstream_version} -S git
+%autosetup -n %{plugin} -S git
 
 # remove requirements
 %py_req_cleanup
@@ -107,3 +112,6 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Thu Feb 15 2018 RDO <dev@lists.rdoproject.org> 0.0.1-0.3.3f51bbegit
+- Update to pre-release 0.0.1 (3f51bbe815a21527475db38cbd3dabf8603e4498)
+
