@@ -19,16 +19,20 @@ Additionally it provides a plugin to automatically load these tests \
 into tempest.
 
 
-%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+%{!?upstream_version: %global upstream_version %{commit}}
+%global commit 80dd51a79452c0fb1886c60977068cb90e75677c
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
 
 Name:       python-%{service}
-Version:    XXX
-Release:    XXX
+Version:    0.0.1    
+Release:    0.4%{?alphatag}%{?dist}
 Summary:    Tempest Integration of Novajoin
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}
 
-Source0:    http://tarballs.openstack.org/%{plugin}/%{plugin}-%{version}.tar.gz
+Source0:    http://opendev.org/x/%{plugin}/archive/%{upstream_version}.tar.gz#/%{module}-%{shortcommit}.tar.gz
 
 BuildArch:  noarch
 BuildRequires:  git
@@ -107,3 +111,6 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Tue Oct 8 2019 RDO <dev@lists.rdoproject.org> - 0.0.1-0.4.80dd51agit
+- Update to post 0.0.1 (80dd51a79452c0fb1886c60977068cb90e75677c)
+
