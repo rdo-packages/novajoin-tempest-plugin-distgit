@@ -11,8 +11,8 @@ into tempest.
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:       python-%{service}
-Version:    XXX
-Release:    XXX
+Version:    0.0.3
+Release:    1%{?dist}
 Summary:    Tempest Integration of Novajoin
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}
@@ -91,3 +91,6 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Thu Oct 01 2020 RDO <dev@lists.rdoproject.org> 0.0.3-1
+- Update to 0.0.3
+
