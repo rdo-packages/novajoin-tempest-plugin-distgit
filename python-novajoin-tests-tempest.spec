@@ -10,19 +10,26 @@ Additionally it provides a plugin to automatically load these tests \
 into tempest.
 
 
-%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+%{!?upstream_version: %global upstream_version %{commit}}
+%global commit 468b968bb3bb042c6db3159246af224f2042d5c1
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
+
+%{?dlrn: %global tarsources %{module}-%{upstream_version}}
+%{!?dlrn: %global tarsources %{plugin}}
 
 Name:       python-%{service}
-Version:    XXX
-Release:    XXX
+Version:    0.0.3
+Release:    1.1%{?alphatag}%{?dist}
 Summary:    Tempest Integration of Novajoin
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}
 
-Source0:    http://tarballs.opendev.org/x/%{plugin}/%{plugin}-%{version}.tar.gz
+Source0:    http://opendev.org/x/%{plugin}/archive/%{upstream_version}.tar.gz#/%{module}-%{shortcommit}.tar.gz
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
-Source101:        http://tarballs.opendev.org/x/%{plugin}/%{plugin}-%{version}.tar.gz.asc
+Source101:        http://tarballs.opendev.org/x/%{plugin}/%{module}-%{version}.tar.gz.asc
 Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 %endif
 
@@ -75,7 +82,7 @@ This package contains the documentation for the Novajoin tempest tests.
 %if 0%{?sources_gpg} == 1
 %{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
 %endif
-%autosetup -n %{module}-%{upstream_version} -S git
+%autosetup -n %{tarsources} -S git
 
 # remove requirements
 %py_req_cleanup
@@ -107,3 +114,5 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Fri Apr 02 2021 Joel Capitao <jcapitao@redhat.com> - 0.0.3-1.1.468b968git
+- Update to post 0.0.3 (468b968bb3bb042c6db3159246af224f2042d5c1)
