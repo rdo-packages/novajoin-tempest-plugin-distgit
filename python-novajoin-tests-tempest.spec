@@ -13,16 +13,16 @@ into tempest.
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:       python-%{service}
-Version:    XXX
-Release:    XXX
+Version:    0.0.3
+Release:    1%{?dist}
 Summary:    Tempest Integration of Novajoin
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}
 
-Source0:    http://tarballs.opendev.org/x/%{plugin}/%{plugin}-%{version}.tar.gz
+Source0:    http://tarballs.opendev.org/x/%{plugin}/%{module}-%{version}.tar.gz
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
-Source101:        http://tarballs.opendev.org/x/%{plugin}/%{plugin}-%{version}.tar.gz.asc
+Source101:        http://tarballs.opendev.org/x/%{plugin}/%{module}-%{version}.tar.gz.asc
 Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 %endif
 
@@ -107,3 +107,6 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Fri Apr 01 2022 RDO <dev@lists.rdoproject.org> 0.0.3-1
+- Update to 0.0.3
+
