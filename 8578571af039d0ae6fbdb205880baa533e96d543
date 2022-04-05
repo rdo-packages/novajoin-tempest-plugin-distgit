@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "8578571af039d0ae6fbdb205880baa533e96d543",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa3e1c4a_0061f7b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-04-05T06:45:45Z",
+      "side": 1,
+      "message": "We pin yoga-uc at commit b2e548518a8893562ed111fe66f5937603f5ec5d [1] which is post 0.0.3 tag.\nIn that case, we need to package a postrelease snapshot as we did for Wallaby [2]\n\n[1] https://github.com/redhat-openstack/rdoinfo/blob/a5d4da8a75e4c8fc810aa17fb45817884ed0a4b9/tags/yoga-uc.yml#L454\n[2] https://review.rdoproject.org/r/c/openstack/novajoin-tempest-plugin-distgit/+/33041",
+      "revId": "8578571af039d0ae6fbdb205880baa533e96d543",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
